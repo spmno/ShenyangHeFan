@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hefan.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hefan.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @hefan.price %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @hefan.photo %>
+</p>
+
+<%= link_to 'Edit', edit_hefan_path(@hefan) %> |
+<%= link_to 'Back', hefans_path %>
