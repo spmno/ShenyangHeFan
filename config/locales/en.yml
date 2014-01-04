@@ -22,3 +22,8 @@
 en:
   hefan: "box lunch"
   list_hefan: "box lunch list"
+  name: "name"
+  description: "description"
+  photo: "photo"
+  price: "price"
+  restaurant: "restaurant"
