@@ -1,4 +1,6 @@
 ShenyangHeFan::Application.routes.draw do
+  resources :users
+
   resources :restaurants
 
   resources :hefans
