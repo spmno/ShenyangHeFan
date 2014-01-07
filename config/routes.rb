@@ -5,6 +5,10 @@ ShenyangHeFan::Application.routes.draw do
 
   resources :hefans
 
+  resources :restaurants do
+    resource :hefans
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
