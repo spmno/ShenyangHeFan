@@ -1,25 +1,31 @@
-<h1>Listing restaurant_hefans</h1>
+<h1><%= I18n.t"list_restaurant_hefans" %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-md-1"><%= I18n.t"name" %></div>
+  <div class="col-md-2"><%= I18n.t"image" %></div>
+  <div class="col-md-1"><%= I18n.t"restaurant" %></div>
+  <div class="col-md-1"><%= I18n.t"price" %></div>
+  <div class="col-md-2"><%= I18n.t"description" %></div>
+  <div class="col-md-1">""</div>
+  <div class="col-md-1">""</div>
+  <div class="col-md-1">""</div>
+</div>
 
-  <tbody>
-    <% @restaurant_hefans.each do |restaurant_hefan| %>
-      <tr>
-        <td><%= link_to 'Show', restaurant_hefan %></td>
-        <td><%= link_to 'Edit', edit_restaurant_hefan_path(restaurant_hefan) %></td>
-        <td><%= link_to 'Destroy', restaurant_hefan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+<% @restaurant_hefans.each do |restaurant_hefan| %>
+  <div class="row">
+    <div class="col-md-1"><%= restaurant_hefan.name %></div>
+    <div class="col-md-2"><%= restaurant_hefan.photo %></div>
+    <div class="col-md-1"><%= restaurant_hefan.restaurant.name %></div>
+    <div class="col-md-1"><%= restaurant_hefan.price %></div>
+    <div class="col-md-2"><%= restaurant_hefan.description %></div>
+    <div class="col-md-1"><%= link_to 'Show', restaurant_hefan %></div>
+    <div class="col-md-1"><%= link_to 'Edit', edit_restaurant_hefan_path(restaurant_hefan) %></div>
+    <div class="col-md-1"><%= link_to 'Destroy', restaurant_hefan, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  </div>
+
+<% end %>
 
 <br>
 
-<%= link_to 'New Restaurant hefan', new_restaurant_hefan_path %>
+<%= link_to (I18n.t"new_restanrant_hefan"), new_restaurant_hefan_path, :class => "btn btn-primary btn-lg" %>
