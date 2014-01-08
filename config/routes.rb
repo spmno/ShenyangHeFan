@@ -1,12 +1,12 @@
 ShenyangHeFan::Application.routes.draw do
   resources :users
 
-  resources :restaurants
+  #resources :restaurants
 
   resources :hefans
 
   resources :restaurants do
-    resource :hefans
+    resources :hefans, controller: 'restaurant_hefans'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
