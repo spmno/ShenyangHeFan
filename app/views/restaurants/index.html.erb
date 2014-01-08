@@ -1,10 +1,10 @@
-<h1>Listing restaurants</h1>
+<h1><%= I18n.t"list_restaurant" %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th><%= I18n.t"name" %></th>
+      <th><%= I18n.t"description" %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to (I18n.t"new_restaurant"), new_restaurant_path %>

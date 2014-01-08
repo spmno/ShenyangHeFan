@@ -28,3 +28,5 @@ en:
   photo: "photo"
   price: "price"
   restaurant: "restaurant"
+  list_restaurant: "restaurants list"
+  new_restaurant: "New restaurant"
