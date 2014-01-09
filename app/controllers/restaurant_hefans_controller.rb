@@ -13,7 +13,8 @@ class RestaurantHefansController < ApplicationController
 
   # GET /hefans/new
   def new
-    @hefan = Hefan.new
+    @restaurant_hefan = Hefan.new
+    @restaurant_hefan.restaurant_id = params[:restaurant_id]
   end
 
   # GET /hefans/1/edit
