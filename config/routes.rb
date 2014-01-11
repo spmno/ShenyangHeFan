@@ -1,4 +1,8 @@
 ShenyangHeFan::Application.routes.draw do
+  resources :places
+
+  resources :districts
+
   resources :users
 
   #resources :restaurants
