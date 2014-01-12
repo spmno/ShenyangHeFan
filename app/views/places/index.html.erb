@@ -1,29 +1,26 @@
-<h1>Listing places</h1>
+<h1><%= I18n.t"list_place" %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>District</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-md-2"><%= I18n.t"name" %></div>
+  <div class="col-md-4"><%= I18n.t"district" %></div>
+  <div class="col-md-2">""</div>
+  <div class="col-md-2">""</div>
+  <div class="col-md-2">""</div>
+</div>
 
-  <tbody>
-    <% @places.each do |place| %>
-      <tr>
-        <td><%= place.name %></td>
-        <td><%= place.district_id %></td>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+
+<% @places.each do |place| %>
+  <div class="row">
+    <div class="col-md-2"><%= place.name %></div>
+    <div class="col-md-4"><%= place.district_id %></div>
+    <div class="col-md-2"><%= link_to 'Show', place %></td>
+    <div class="col-md-2"><%= link_to 'Edit', edit_place_path(place) %></div>
+    <div class="col-md-2"><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  </div>
+<% end %>
+
 
 <br>
 
-<%= link_to 'New Place', new_place_path %>
+<%= link_to (I18n.t"new_place"), new_place_path %>

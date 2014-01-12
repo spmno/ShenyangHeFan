@@ -34,3 +34,9 @@ en:
   restaurant_hefans: "restaurant box lunch"
   list_restaurant_hefans: "restaurant hefans list"
   new_restanrant_hefan: "New restaurant box lunch"
+  place: "place"
+  list_place: "place list"
+  new_place: "New place"
+  district: "district"
+  list_district: "district list"
+
