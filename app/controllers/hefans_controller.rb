@@ -4,7 +4,7 @@ class HefansController < ApplicationController
   # GET /hefans
   # GET /hefans.json
   def index
-    @hefans = Hefan.all
+    @hefans = Hefan.page(params[:page])
   end
 
   # GET /hefans/1
