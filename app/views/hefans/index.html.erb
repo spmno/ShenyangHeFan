@@ -1,33 +1,15 @@
 <h1><%= I18n.t"list_hefan" %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Photo</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @hefans.each do |hefan| %>
-      <tr>
-        <td><%= hefan.name %></td>
-        <td><%= hefan.description %></td>
-        <td><%= hefan.price %></td>
-        <td><%= hefan.photo %></td>
-        <td><%= link_to 'Show', hefan %></td>
-        <td><%= link_to 'Edit', edit_hefan_path(hefan) %></td>
-        <td><%= link_to 'Destroy', hefan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% @hefans.each do |hefan| %>
+  <%= hefan.name %>
+  <%= hefan.description %>
+  <%= hefan.price %>
+  <%= hefan.photo %>
+  <%= link_to 'Show', hefan %>
+  <%= link_to 'Edit', edit_hefan_path(hefan) %>
+  <%= link_to 'Destroy', hefan, method: :delete, data: { confirm: 'Are you sure?' } %>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+<% end %>
 
 <br>
 <%= paginate @hefans %>
-<%= link_to 'New Hefan', new_hefan_path %>
