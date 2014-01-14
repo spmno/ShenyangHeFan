@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  back: "back"
+  show: "show"
+  edit: "edit"
+  delete: "delete"
   hefan: "box lunch"
   new_hefan: "New box lunch"
   list_hefan: "box lunch list"

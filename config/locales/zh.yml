@@ -1,4 +1,8 @@
 zh:
+  back: "返回"
+  show: "显示"
+  edit: "编辑"
+  delete: "删除"
   hefan: "盒饭"
   new_hefan: "新盒饭"
   list_hefan: "盒饭列表"

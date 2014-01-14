@@ -1,29 +1,23 @@
 <h1><%= I18n.t"list_restaurant" %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th><%= I18n.t"name" %></th>
-      <th><%= I18n.t"description" %></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-md-2"><%= I18n.t"name" %></div>
+  <div class="col-md-4"><%= I18n.t"description" %></div>
+  <div class="col-md-1">""</div>
+  <div class="col-md-1">""</div>
+  <div class="col-md-1">""</div>
+</div>
 
-  <tbody>
-    <% @restaurants.each do |restaurant| %>
-      <tr>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.description %></td>
-        <td><%= link_to 'Show', restaurant %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @restaurants.each do |restaurant| %>
+  <div class="row">
+    <div class="col-md-2"><%= restaurant.name %></div>
+    <div class="col-md-4"><%= restaurant.description %></div>
+    <div class="col-md-1"><%= link_to 'Show', restaurant %></div>
+    <div class="col-md-1"><%= link_to 'Edit', edit_restaurant_path(restaurant) %></div>
+    <div class="col-md-1"><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  </div>
 
+<% end %>
 <br>
 
 <%= link_to (I18n.t"new_restaurant"), new_restaurant_path %>

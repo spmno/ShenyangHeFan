@@ -1,14 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= I18n.t"name" %>:</strong>
   <%= @restaurant.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= I18n.t"description" %>:</strong>
   <%= @restaurant.description %>
 </p>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<p>
+  <strong><%= I18n.t"hefan" %></strong>
+  <% @hefans.each do |hefan| %>
+    <%= hefan.name %>
+
+  <% end %>
+</p>
+<br>
+
+<%= link_to (I18n.t"new_hefan"), new_restaurant_hefan_path(@restaurant) %>
+<br>
+<br>
+
+<%= link_to (I18n.t"edit"), edit_restaurant_path(@restaurant) %> |
+<%= link_to (I18n.t"back"), restaurants_path %>
