@@ -12,25 +12,25 @@
   <% end %>
 
    <div class="field">
-     <%f.label :restaurant_id %>
-     <%f.text_field :restaurant_id %>
+     <%= f.label :restaurant_id, (I18n.t"restaurant") %>ID<br>
+     <%= f.text_field :restaurant_id %>
    </div>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, (I18n.t"name") %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description, (I18n.t"description") %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
+    <%= f.label :price, (I18n.t"price") %><br>
     <%= f.text_field :price %>
   </div>
   <div class="field">
     <%= f.label :photo %><br>
-    <%= f.text_field :photo %>
+    <%= f.file_field :photo %>
   </div>
   <div class="actions">
     <%= f.submit %>

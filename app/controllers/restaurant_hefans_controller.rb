@@ -69,7 +69,7 @@ class RestaurantHefansController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def restaurant_hefan_params
-    params.require(:hefan).permit(:name, :description, :price, :photo)
+    params.require(:hefan).permit(:name, :description, :price, :photo, :restaurant_id)
   end
 
 end
