@@ -35,3 +35,6 @@ textarea {
   padding-top: 15px;
   display: table-cell;
 }
+
+.pin{border-left:#c9c7c8 1px solid;border-bottom:#c9c7c8 1px solid;border-top:#dedcdd 1px solid;border-right:#c9c7c8 1px solid;}
+.pin,.Board{position:absolute;width:192px;padding:15px 15px 0;font-size:12px;background-color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);-moz-box-shadow:0 1px 3px rgba(0,0,0,.3);-webkit-box-shadow:0 1px 3px rgba(0,0,0,.3)}

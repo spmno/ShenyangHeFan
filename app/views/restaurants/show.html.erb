@@ -13,7 +13,7 @@
 <p>
   <strong><%= I18n.t"hefan" %></strong>
   <% @hefans.each do |hefan| %>
-    <%= hefan.name %>
+    <%= link_to (hefan.name), edit_restaurant_hefan_path(@restaurant, hefan) %>
 
   <% end %>
 </p>

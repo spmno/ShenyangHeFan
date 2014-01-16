@@ -15,12 +15,12 @@
 <% @restaurant_hefans.each do |restaurant_hefan| %>
   <div class="row">
     <div class="col-md-1"><%= restaurant_hefan.name %></div>
-    <div class="col-md-2"><%= restaurant_hefan.photo %></div>
+    <div class="col-md-2"><%= image_tag(restaurant_hefan.photo) %></div>
     <div class="col-md-1"><%= restaurant_hefan.restaurant.name %></div>
     <div class="col-md-1"><%= restaurant_hefan.price %></div>
     <div class="col-md-2"><%= restaurant_hefan.description %></div>
-    <div class="col-md-1"><%= link_to 'Show', restaurant_hefan %></div>
-    <div class="col-md-1"><%= link_to 'Edit', edit_restaurant_hefan_path(restaurant_hefan) %></div>
+    <div class="col-md-1"><%= link_to 'Show', restaurant_hefan_path(restaurant_hefan.restaurant, restaurant_hefan) %></div>
+    <div class="col-md-1"><%= link_to 'Edit', edit_restaurant_hefan_path(restaurant_hefan.restaurant, restaurant_hefan) %></div>
     <div class="col-md-1"><%= link_to 'Destroy', restaurant_hefan, method: :delete, data: { confirm: 'Are you sure?' } %></div>
   </div>
 

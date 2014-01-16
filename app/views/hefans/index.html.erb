@@ -1,15 +1,24 @@
 <h1><%= I18n.t"list_hefan" %></h1>
 
-<% @hefans.each do |hefan| %>
-  <%= hefan.name %>
-  <%= hefan.description %>
-  <%= hefan.price %>
-  <%= hefan.photo %>
+<div class="container-fiuld">
+  <% @hefans.each do |hefan| %>
+      <div class="box pin">
+        <%= image_tag(hefan.photo) %>
+        <%= hefan.name %>
+        <%= hefan.description %>
+        <%= hefan.price %>
+
+      </div>
+
+      <!--
   <%= link_to 'Show', hefan %>
   <%= link_to 'Edit', edit_hefan_path(hefan) %>
   <%= link_to 'Destroy', hefan, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </tr>
-<% end %>
+  -->
+
+  <% end %>
+</div>
+
 
 <br>
 <%= paginate @hefans %>

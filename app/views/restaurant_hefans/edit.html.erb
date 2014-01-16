@@ -1,6 +1,44 @@
-<h1><%= I18n.t"edit" I18n.t"hefan" %></h1>
+<h1><%= I18n.t"edit" %> <%= I18n.t"hefan" %></h1>
 
-<%= render 'form' %>
+<%= form_for(@restaurant_hefan, :controller => 'restaurant_hefans', :action => 'update') do |f| %>
+    <% if @restaurant_hefan.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@restaurant_hefan.errors.count, "error") %> prohibited this restaurant_hefan from being saved:</h2>
 
-<%= link_to 'Show', @restaurant_hefan %> |
-<%= link_to 'Back', restaurant_hefans_path %>
+          <ul>
+            <% @restaurant_hefan.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :restaurant_id, (I18n.t"restaurant") %>ID<br>
+      <%= f.text_field :restaurant_id %>
+    </div>
+
+    <div class="field">
+      <%= f.label :name, (I18n.t"name") %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :description, (I18n.t"description") %><br>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :price, (I18n.t"price") %><br>
+      <%= f.text_field :price %>
+    </div>
+    <div class="field">
+      <%= f.label :photo, (I18n.t"photo") %><br>
+      <%= f.file_field :photo %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit(I18n.t"new_hefan") %>
+    </div>
+<% end %>
+
+<%= link_to (I18n.t"show"), restaurant_hefan_path(@restaurant_id, @restaurant_hefan) %> |
+<%= link_to (I18n.t"back"), restaurant_hefans_path %>

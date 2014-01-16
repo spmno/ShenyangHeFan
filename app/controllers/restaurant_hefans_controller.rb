@@ -1,5 +1,5 @@
 class RestaurantHefansController < ApplicationController
-  before_action :set_restaurant_hefan, only: [:show, :edit, :update, :destroy]
+  before_action :set_restaurant_hefan, only: [:show, :update, :destroy]
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
     @restaurant_hefans = @restaurant.hefans
@@ -19,6 +19,8 @@ class RestaurantHefansController < ApplicationController
 
   # GET /hefans/1/edit
   def edit
+    @restaurant_id = params[:restaurant_id]
+    @restaurant_hefan = Hefan.find_by_restaurant_id(@restaurant_id)
   end
 
   # POST /hefans
@@ -28,7 +30,7 @@ class RestaurantHefansController < ApplicationController
 
     respond_to do |format|
       if @hefan.save
-        format.html { redirect_to @hefan, notice: 'Hefan was successfully created.' }
+        format.html { redirect_to :action => 'show', :id => @hefan, notice: 'Hefan was successfully created.' }
         format.json { render action: 'show', status: :created, location: @hefan }
       else
         format.html { render action: 'new' }
@@ -64,7 +66,8 @@ class RestaurantHefansController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_restaurant_hefan
-    @hefan = Hefan.find_by_restaurant_id(params[:restaurant_id])
+    @restaurant_id = params[:restaurant_id]
+    @hefan = Hefan.find_by_restaurant_id(@restaurant_id)
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

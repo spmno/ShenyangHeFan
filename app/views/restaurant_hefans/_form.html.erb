@@ -1,4 +1,4 @@
-<%= form_for(@restaurant_hefan) do |f| %>
+<%= form_for(@restaurant_hefan, :url => restaurant_hefans_path) do |f| %>
   <% if @restaurant_hefan.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@restaurant_hefan.errors.count, "error") %> prohibited this restaurant_hefan from being saved:</h2>
