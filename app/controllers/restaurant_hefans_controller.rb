@@ -20,7 +20,8 @@ class RestaurantHefansController < ApplicationController
   # GET /hefans/1/edit
   def edit
     @restaurant_id = params[:restaurant_id]
-    @restaurant_hefan = Hefan.find_by_restaurant_id(@restaurant_id)
+    @hefan_id = params[:id]
+    @restaurant_hefan = Hefan.find(@hefan_id)
   end
 
   # POST /hefans
