@@ -3,10 +3,12 @@
 <div class="container-fiuld">
   <% @hefans.each do |hefan| %>
       <div class="box pin">
-        <%= image_tag(hefan.photo) %>
+        <%= link_to image_tag(hefan.photo), hefan %>
         <%= hefan.name %>
-        <%= hefan.description %>
         <%= hefan.price %>
+        <br>
+        <%= hefan.description %>
+
 
       </div>
 
