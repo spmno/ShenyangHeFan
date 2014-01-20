@@ -1,3 +1,19 @@
 // Place all the styles related to the Hefans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#district {
+  list-style:none;
+  overflow: auto;
+  margin:0;
+  padding:0;
+  zoom:1;
+  white-space: nowrap;
+  width: 100%;
+  li {
+    line-height:20px;
+    margin:5px 4px;
+    border:1px solid silver;
+    text-align:center;
+    display: inline;
+  }
+}

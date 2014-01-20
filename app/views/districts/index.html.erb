@@ -1,9 +1,9 @@
-<h1>Listing districts</h1>
+<h1><%= I18n.t"list_district" %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th><%= I18n.t"name" %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +14,9 @@
     <% @districts.each do |district| %>
       <tr>
         <td><%= district.name %></td>
-        <td><%= link_to 'Show', district %></td>
-        <td><%= link_to 'Edit', edit_district_path(district) %></td>
-        <td><%= link_to 'Destroy', district, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to (I18n.t"show"), district %></td>
+        <td><%= link_to (I18n.t"edit"), edit_district_path(district) %></td>
+        <td><%= link_to (I18n.t"delete"), district, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New District', new_district_path %>
+<%= link_to (I18n.t"new_district"), new_district_path %>

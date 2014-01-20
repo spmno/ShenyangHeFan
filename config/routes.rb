@@ -13,6 +13,9 @@ ShenyangHeFan::Application.routes.draw do
     resources :hefans, controller: 'restaurant_hefans'
   end
 
+  resources :districts do
+    resources :hefans, controller: 'district_hefans'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

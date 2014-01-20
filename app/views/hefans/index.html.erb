@@ -1,5 +1,14 @@
 <h1><%= I18n.t"list_hefan" %></h1>
 
+<div id="district">
+  <ul>
+    <% @district.each do |district| %>
+        <li><%= district.name %></li>
+    <% end %>
+  </ul>
+
+</div>
+
 <div class="container-fiuld">
   <% @hefans.each do |hefan| %>
       <div class="box pin">
