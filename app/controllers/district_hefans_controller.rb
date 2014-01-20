@@ -4,7 +4,8 @@ class DistrictHefansController < ApplicationController
   # GET /district_hefans
   # GET /district_hefans.json
   def index
-    @district_hefans = DistrictHefan.all
+    @district = District.find(params[:district_id])
+    @hefans = @district.restaurants.hefans
   end
 
   # GET /district_hefans/1
