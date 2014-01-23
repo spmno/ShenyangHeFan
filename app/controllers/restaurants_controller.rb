@@ -21,6 +21,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1/edit
   def edit
+    @district = District.all
   end
 
   # POST /restaurants
